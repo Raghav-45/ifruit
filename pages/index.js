@@ -11,61 +11,45 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <main>
+        {/* <div className="relative border-10px rounded-[1.8rem] overflow-hidden h-[660px] aspect-[6/13] bg-[url('/assets/iPhone_Homescreen.webp')] bg-contain mx-auto my-3"> */}
+        <div className="relative border-10px rounded-[1.8rem] overflow-hidden h-[660px] aspect-[6/13] bg-[url('/assets/wallpaper.jpg')] bg-cover mx-auto my-3">
+          {/* <img className='absolute max-w-max w-[150rem] h-full'  src="/assets/pngwing.com.png" alt="Frame" /> */}
+          <div className='top-0 h-[2rem] w-100'></div>
+          
+          <div class="prevent-select px-[1.37rem] pt-[1.65rem] grid grid-cols-4 gap-[1.37rem] gap-y-[1.25rem] backdrop-blur-[0.5px]">
+            <div className='w-auto h-[3.9rem]'><div className='flex flex-col items-center justify-center'><img className='h-full w-full' src="/assets/AppleMusic.png" alt="AppIcon" /><p className='text-white text-[0.62rem] leading-5'>Mail</p></div></div>
+            <div className='w-auto h-[3.9rem]'><div className='flex flex-col items-center justify-center'><img className='h-full w-full' src="/assets/AppleMusic.png" alt="AppIcon" /><p className='text-white text-[0.62rem] leading-5'>Calender</p></div></div>
+            <div className='w-auto h-[3.9rem]'><div className='flex flex-col items-center justify-center'><img className='h-full w-full' src="/assets/AppleMusic.png" alt="AppIcon" /><p className='text-white text-[0.62rem] leading-5'>Photos</p></div></div>
+            <div className='w-auto h-[3.9rem]'><div className='flex flex-col items-center justify-center'><img className='h-full w-full' src="/assets/AppleMusic.png" alt="AppIcon" /><p className='text-white text-[0.62rem] leading-5'>Camera</p></div></div>
+            <div className='w-auto h-[3.9rem]'><div className='flex flex-col items-center justify-center'><img className='h-full w-full' src="/assets/AppleMusic.png" alt="AppIcon" /><p className='text-white text-[0.62rem] leading-5'>Maps</p></div></div>
+            <div className='w-auto h-[3.9rem]'><div className='flex flex-col items-center justify-center'><img className='h-full w-full' src="/assets/AppleMusic.png" alt="AppIcon" /><p className='text-white text-[0.62rem] leading-5'>Clock</p></div></div>
+            <div className='w-auto h-[3.9rem]'><div className='flex flex-col items-center justify-center'><img className='h-full w-full' src="/assets/AppleMusic.png" alt="AppIcon" /><p className='text-white text-[0.62rem] leading-5'>Weather</p></div></div>
+            <div className='w-auto h-[3.9rem]'><div className='flex flex-col items-center justify-center'><img className='h-full w-full' src="/assets/AppleMusic.png" alt="AppIcon" /><p className='text-white text-[0.62rem] leading-5'>News</p></div></div>
+            <div className='w-auto h-[3.9rem]'><div className='flex flex-col items-center justify-center'><img className='h-full w-full' src="/assets/AppleMusic.png" alt="AppIcon" /><p className='text-white text-[0.62rem] leading-5'>Home</p></div></div>
+            <div className='w-auto h-[3.9rem]'><div className='flex flex-col items-center justify-center'><img className='h-full w-full' src="/assets/AppleMusic.png" alt="AppIcon" /><p className='text-white text-[0.62rem] leading-5'>Notes</p></div></div>
+            <div className='w-auto h-[3.9rem]'><div className='flex flex-col items-center justify-center'><img className='h-full w-full' src="/assets/AppleMusic.png" alt="AppIcon" /><p className='text-white text-[0.62rem] leading-5'>Stocks</p></div></div>
+            <div className='w-auto h-[3.9rem]'><div className='flex flex-col items-center justify-center'><img className='h-full w-full' src="/assets/AppleMusic.png" alt="AppIcon" /><p className='text-white text-[0.62rem] leading-5'>Reminders</p></div></div>
+            <div className='w-auto h-[3.9rem]'><div className='flex flex-col items-center justify-center'><img className='h-full w-full' src="/assets/AppleMusic.png" alt="AppIcon" /><p className='text-white text-[0.62rem] leading-5'>Videos</p></div></div>
+            <div className='w-auto h-[3.9rem]'><div className='flex flex-col items-center justify-center'><img className='h-full w-full' src="/assets/AppleMusic.png" alt="AppIcon" /><p className='text-white text-[0.62rem] leading-5'>AppStore</p></div></div>
+            <div className='w-auto h-[3.9rem]'><div className='flex flex-col items-center justify-center'><img className='h-full w-full' src="/assets/AppleMusic.png" alt="AppIcon" /><p className='text-white text-[0.62rem] leading-5'>iTunesStore</p></div></div>
+            <div className='w-auto h-[3.9rem]'><div className='flex flex-col items-center justify-center'><img className='h-full w-full' src="/assets/AppleMusic.png" alt="AppIcon" /><p className='text-white text-[0.62rem] leading-5'>iBooks</p></div></div>
+            <div className='w-auto h-[3.9rem]'><div className='flex flex-col items-center justify-center'><img className='h-full w-full' src="/assets/AppleMusic.png" alt="AppIcon" /><p className='text-white text-[0.62rem] leading-5'>Health</p></div></div>
+            <div className='w-auto h-[3.9rem]'><div className='flex flex-col items-center justify-center'><img className='h-full w-full' src="/assets/AppleMusic.png" alt="AppIcon" /><p className='text-white text-[0.62rem] leading-5'>Wallet</p></div></div>
+            <div className='w-auto h-[3.9rem]'><div className='flex flex-col items-center justify-center'><img className='h-full w-full' src="/assets/AppleMusic.png" alt="AppIcon" /><p className='text-white text-[0.62rem] leading-5'>Settings</p></div></div>
+          </div>
+          
+          <div className='prevent-select absolute bottom-0 w-full h-[5.8rem] mb-[0.6rem] px-[9px]'>
+            <div className='h-[1rem] w-full'><p className='flex justify-center items-center text-white'>• • •</p></div>
+            <div class="grid grid-cols-4 gap-[1.3rem] p-[12px] bg-gray-500/40 backdrop-blur-sm rounded-3xl">
+              <div className='w-auto h-auto'><div className='flex flex-col items-center justify-center'><img className='h-full w-full' src="/assets/AppleMusic.png" alt="AppIcon" /></div></div>
+              <div className='w-auto h-auto'><div className='flex flex-col items-center justify-center'><img className='h-full w-full' src="/assets/AppleMusic.png" alt="AppIcon" /></div></div>
+              <div className='w-auto h-auto'><div className='flex flex-col items-center justify-center'><img className='h-full w-full' src="/assets/AppleMusic.png" alt="AppIcon" /></div></div>
+              <div className='w-auto h-auto'><div className='flex flex-col items-center justify-center'><img className='h-full w-full' src="/assets/AppleMusic.png" alt="AppIcon" /></div></div>
+            </div>
+          </div>
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   )
 }
