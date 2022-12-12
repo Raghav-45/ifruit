@@ -7,3 +7,28 @@
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
+
+.notch div:before, .notch div:after {
+  position: absolute;
+  top: 0px;
+  width: 12px;
+  height: 12px;
+  content: " ";
+  /* border: 1px solid #000; */
+  border: none;
+}
+
+.notch div:before {
+  left: -11px;
+
+  border-top-right-radius: 8px;
+  border-width: 1px 1px 0 0;
+  box-shadow: 2px -2px 0 #000;
+}
+.notch div:after {
+  right: -11px;
+
+  border-top-left-radius: 8px;
+  border-width: 1px 0 0 1px;
+  box-shadow: -2px -2px 0 #000;
+}
