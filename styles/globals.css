@@ -23,12 +23,12 @@
 
   border-top-right-radius: 8px;
   border-width: 1px 1px 0 0;
-  box-shadow: 2px -2px 0 #000;
+  box-shadow: 3px -3px 0 #000;
 }
 .notch div:after {
   right: -12px;
 
   border-top-left-radius: 8px;
   border-width: 1px 0 0 1px;
-  box-shadow: -2px -2px 0 #000;
+  box-shadow: -3px -3px 0 #000;
 }
