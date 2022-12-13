@@ -21,7 +21,7 @@ export default function Home() {
 
       <main>
         <div className='prevent-select grid min-h-screen bg-purple-50 place-items-center'>
-          <div className='relative h-[712px] w-[350px] bg-black rounded-[57px] border-[14px] border-black overflow-hidden ring ring-purple-400 shadow-xl'>
+          <div className='relative h-[712px] w-[350px] bg-black rounded-[55px] border-[14px] border-black overflow-hidden ring ring-purple-400 shadow-xl'>
             <img className='absolute inset-0 h-full w-full object-cover' src="https://wallpapers.hector.me/wavey/Rainbow%20iPhone%20P3.jpg" alt="" />
             <Notch />
             <div className='relative'>
