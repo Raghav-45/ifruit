@@ -18,7 +18,7 @@ export default function Home() {
       {name: 'Clock', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Apple_Clock_icon.svg/2048px-Apple_Clock_icon.svg.png'},
       {name: 'Weather', icon: 'https://i.pinimg.com/originals/06/c4/f7/06c4f70ec5931e2342e703e8a3f0a253.png'},
       {name: 'News', icon: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Apple_News_icon_%28iOS%29.png'},
-      {name: 'Home', icon: '/assets/AppleMusic.png'},
+      {name: 'Shortcuts', icon: 'https://2672686a4cf38e8c2458-2712e00ea34e3076747650c92426bbb5.ssl.cf1.rackcdn.com/2018-10-15-00-44-52.png'},
       {name: 'Notes', icon: 'https://upload.wikimedia.org/wikipedia/commons/e/ed/Apple_Notes_%28iOS%29.png'},
       {name: 'Stocks', icon: 'https://cdn.jim-nielsen.com/ios/512/stocks-2018-04-25.png'},
       {name: 'Reminders', icon: 'https://cdn.jim-nielsen.com/ios/512/reminders-2022-09-26.png'},
