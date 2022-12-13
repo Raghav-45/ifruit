@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import Link from 'next/link'
 
 import { Notch } from '../components/notch'
 import { Notifications } from '../components/notifications'
@@ -9,17 +8,18 @@ import { Notifications } from '../components/notifications'
 export default function Lockscreen() {
   const date = new Date();
   const CurrentTime = (date.getHours() % 12 || 12) + ':' + date.getMinutes();
+
   const DateToday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"][date.getDay()] + ', ' + ["January","February","March","April","May","June","July","August","September","October","November","December"][date.getMonth()] + ' ' + date.getDate()
 
   return (<>
     <div className='mt-2 flex flex-col items-center'>
-      <Link href="/home"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8 text-white">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8 text-white">
         <path d="M18 1.5c2.9 0 5.25 2.35 5.25 5.25v3.75a.75.75 0 01-1.5 0V6.75a3.75 3.75 0 10-7.5 0v3a3 3 0 013 3v6.75a3 3 0 01-3 3H3.75a3 3 0 01-3-3v-6.75a3 3 0 013-3h9v-3c0-2.9 2.35-5.25 5.25-5.25z" />
-      </svg></Link>
-      {/* <p className='mt-3 text-white text-6xl font-extralight'>9:41</p> */}
-      <p className='mt-3 text-white text-6xl font-extralight'>{CurrentTime}</p>
-      {/* <p className='mt-1 text-white text-lg font-extralight'>Monday, June 7</p> */}
-      <p className='mt-1 text-white text-lg font-extralight'>{DateToday}</p>
+      </svg>
+      <p className='mt-3 text-white text-6xl font-extralight'>9:41</p>
+      {/* <p className='mt-3 text-white text-6xl font-extralight'>{CurrentTime}</p> */}
+      <p className='mt-1 text-white text-lg font-extralight'>Monday, June 7</p>
+      {/* <p className='mt-1 text-white text-lg font-extralight'>{DateToday}</p> */}
     </div>
 
     <div class="relative mt-4 mx-2">
