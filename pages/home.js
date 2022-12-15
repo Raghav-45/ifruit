@@ -67,7 +67,7 @@ export default function Home() {
         </div>
         <div id='Screen2' className='h-full w-full'>
           <div className='h-10 w-full px-[1.37rem] my-[1.65rem]'>
-            <div className='h-full w-full bg-gray-300/80 backdrop-blur-lg rounded-xl'><p className='flex items-center justify-center h-full w-full text-white font-light'>App Library</p></div>
+            <div className='h-full w-full bg-white/30 backdrop-blur-lg rounded-xl'><p className='flex items-center justify-center h-full w-full text-white font-light'>App Library</p></div>
           </div>
           <div className="prevent-select px-[1.37rem] grid grid-cols-2 gap-[1.5rem] gap-y-3">
             <LibraryFolder name='Suggestions' />
