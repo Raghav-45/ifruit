@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import React, { useState, useEffect } from 'react';
+
 
 import { Notch } from '../components/notch'
 import { Notifications } from '../components/notifications'
@@ -31,9 +33,47 @@ export default function Home() {
       {name: 'Settings', icon: 'https://external-preview.redd.it/su6kPQpCxuQ82YBY0kFOnLbzmPAr2_tlvM9llje_tjA.jpg?auto=webp&s=1942f8c1e1c41a96df2f946e2c621dcf6355ee1b'},
     ]
   }
+
+  const [scrollValue, setScrollValue] = useState(0)
+
+  // useEffect(() => {
+  //   // document.getElementById("Screen3").scrollIntoView()
+  //   if (scrollValue>24 && scrollValue<26) {
+  //     console.log('2')
+  //     document.getElementById("Screen2").scrollIntoView()
+  //   } else if (scrollValue>49 && scrollValue<51) {
+  //     console.log('3')
+  //     document.getElementById("Screen3").scrollIntoView()
+  //   } else if (scrollValue>74 && scrollValue<76) {
+  //     console.log('4')
+  //     document.getElementById("Screen4").scrollIntoView()
+  //   }
+  // }, [scrollValue])
+  
   return (
-    <div class="prevent-select px-[1.37rem] pt-[1.65rem] grid grid-cols-4 gap-[1.5rem] gap-y-3 backdrop-blur-[0px]">
-      {HomeData.Apps.map((elem) => <div className='w-auto h-auto flex flex-col items-center justify-center'><div className='h-auto w-full rounded-[0.85rem] aspect-[1/1] bg-gray-400 overflow-hidden'><img src={elem.icon} className='h-full w-full' ></img></div><p className='text-white text-[0.62rem] font-light leading-5'>{elem.name}</p></div>)}
+    <div id='myDIV' onScroll={(e) => {setScrollValue((e.target.scrollLeft/e.target.scrollWidth)*100)}} className="relative overflow-x-scroll pb-10 hide-scroll-bar h-[570px] w-full">
+      <div className='absolute grid grid-cols-4 gap-[0px] h-full w-[400%]'>
+        <div id='Screen1' className='h-full w-full'>
+          <div className="prevent-select pt-[1.65rem] px-[1.37rem] grid grid-cols-4 gap-[1.5rem] gap-y-3 backdrop-blur-[0px]">
+            {HomeData.Apps.map((elem) => <div className='w-auto h-full flex flex-col items-center justify-center'><div className='h-auto w-full rounded-[0.85rem] aspect-[1/1] bg-gray-400 overflow-hidden'><img src={elem.icon} className='h-full w-full'></img></div><p className='text-white text-[0.62rem] font-light leading-5'>{elem.name}</p></div>)}
+          </div>
+        </div>
+        <div id='Screen2' className='h-full w-full'>
+          <div className="prevent-select pt-[1.65rem] px-[1.37rem] grid grid-cols-4 gap-[1.5rem] gap-y-3 backdrop-blur-[0px]">
+            {HomeData.Apps.map((elem) => <div className='w-auto h-full flex flex-col items-center justify-center'><div className='h-auto w-full rounded-[0.85rem] aspect-[1/1] bg-gray-400 overflow-hidden'><img src={elem.icon} className='h-full w-full'></img></div><p className='text-white text-[0.62rem] font-light leading-5'>{elem.name}</p></div>)}
+          </div>
+        </div>
+        <div id='Screen3' className='h-full w-full'>
+          <div className="prevent-select pt-[1.65rem] px-[1.37rem] grid grid-cols-4 gap-[1.5rem] gap-y-3 backdrop-blur-[0px]">
+            {HomeData.Apps.map((elem) => <div className='w-auto h-full flex flex-col items-center justify-center'><div className='h-auto w-full rounded-[0.85rem] aspect-[1/1] bg-gray-400 overflow-hidden'><img src={elem.icon} className='h-full w-full'></img></div><p className='text-white text-[0.62rem] font-light leading-5'>{elem.name}</p></div>)}
+          </div>
+        </div>
+        <div id='Screen4' className='h-full w-full'>
+          <div className="prevent-select pt-[1.65rem] px-[1.37rem] grid grid-cols-4 gap-[1.5rem] gap-y-3 backdrop-blur-[0px]">
+            {HomeData.Apps.map((elem) => <div className='w-auto h-full flex flex-col items-center justify-center'><div className='h-auto w-full rounded-[0.85rem] aspect-[1/1] bg-gray-400 overflow-hidden'><img src={elem.icon} className='h-full w-full'></img></div><p className='text-white text-[0.62rem] font-light leading-5'>{elem.name}</p></div>)}
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
