@@ -7,6 +7,8 @@ import React, { useState, useEffect } from 'react';
 import { Notch } from '../components/notch'
 import { Notifications } from '../components/notifications'
 import Frame from '../components/frame'
+import { AppShortcut } from '../components/AppShortcut';
+import { LibraryFolder } from '../components/LibraryFolders';
 
 export default function Home() {
   const HomeData = {
@@ -52,25 +54,26 @@ export default function Home() {
   
   return (
     <div id='myDIV' onScroll={(e) => {setScrollValue((e.target.scrollLeft/e.target.scrollWidth)*100)}} className="relative overflow-x-scroll pb-10 hide-scroll-bar h-[570px] w-full">
-      <div className='absolute grid grid-cols-4 gap-[0px] h-full w-[400%]'>
+      <div className='absolute grid grid-cols-3 gap-[0px] h-full w-[300%]'>
         <div id='Screen1' className='h-full w-full'>
           <div className="prevent-select pt-[1.65rem] px-[1.37rem] grid grid-cols-4 gap-[1.5rem] gap-y-3 backdrop-blur-[0px]">
-            {HomeData.Apps.map((elem) => <div className='w-auto h-full flex flex-col items-center justify-center'><div className='h-auto w-full rounded-[0.85rem] aspect-[1/1] bg-gray-400 overflow-hidden'><img src={elem.icon} className='h-full w-full'></img></div><p className='text-white text-[0.62rem] font-light leading-5'>{elem.name}</p></div>)}
+            {HomeData.Apps.map((elem) => <AppShortcut icon={elem.icon} name={elem.name}/>)}
           </div>
         </div>
         <div id='Screen2' className='h-full w-full'>
           <div className="prevent-select pt-[1.65rem] px-[1.37rem] grid grid-cols-4 gap-[1.5rem] gap-y-3 backdrop-blur-[0px]">
-            {HomeData.Apps.map((elem) => <div className='w-auto h-full flex flex-col items-center justify-center'><div className='h-auto w-full rounded-[0.85rem] aspect-[1/1] bg-gray-400 overflow-hidden'><img src={elem.icon} className='h-full w-full'></img></div><p className='text-white text-[0.62rem] font-light leading-5'>{elem.name}</p></div>)}
+            {HomeData.Apps.map((elem) => <AppShortcut icon={elem.icon} name={elem.name}/>)}
           </div>
         </div>
-        <div id='Screen3' className='h-full w-full'>
-          <div className="prevent-select pt-[1.65rem] px-[1.37rem] grid grid-cols-4 gap-[1.5rem] gap-y-3 backdrop-blur-[0px]">
-            {HomeData.Apps.map((elem) => <div className='w-auto h-full flex flex-col items-center justify-center'><div className='h-auto w-full rounded-[0.85rem] aspect-[1/1] bg-gray-400 overflow-hidden'><img src={elem.icon} className='h-full w-full'></img></div><p className='text-white text-[0.62rem] font-light leading-5'>{elem.name}</p></div>)}
+        <div id='Screen2' className='h-full w-full'>
+          <div className='h-10 w-full px-[1.37rem] my-[1.65rem]'>
+            <div className='h-full w-full bg-gray-300/80 backdrop-blur-lg rounded-xl'><p className='flex items-center justify-center h-full w-full text-white font-light'>App Library</p></div>
           </div>
-        </div>
-        <div id='Screen4' className='h-full w-full'>
-          <div className="prevent-select pt-[1.65rem] px-[1.37rem] grid grid-cols-4 gap-[1.5rem] gap-y-3 backdrop-blur-[0px]">
-            {HomeData.Apps.map((elem) => <div className='w-auto h-full flex flex-col items-center justify-center'><div className='h-auto w-full rounded-[0.85rem] aspect-[1/1] bg-gray-400 overflow-hidden'><img src={elem.icon} className='h-full w-full'></img></div><p className='text-white text-[0.62rem] font-light leading-5'>{elem.name}</p></div>)}
+          <div className="prevent-select px-[1.37rem] grid grid-cols-2 gap-[1.5rem] gap-y-3">
+            <LibraryFolder name='Suggestions' />
+            <LibraryFolder name='Recently Added' />
+            <LibraryFolder name='Social' />
+            <LibraryFolder name='Entertainment' />  
           </div>
         </div>
       </div>
